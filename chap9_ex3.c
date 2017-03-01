@@ -21,15 +21,15 @@ int main (void)
     score1 = score4 = 136500;
     score2 = 210025;
    // Player needs to input score for the second game
-   printf("Please enter your score for your second game.");
+   printf("Please enter your score for your second game:");
    scanf("%d", &score2);
    
    averageScore = (score1 + score2 + score3 +score4)/4;
    printf ("Your average pacman score is %.1f\n", averageScore);
    
    scoreDelta = 320950 - averageScore;
-   percentDiff = 100 ((320950 - averageScore) / 320950);
-   printf("Your score is %.1f points lower than the High Score of 320, 950!\n," &scoreDelta);
+   percentDiff = 100 * ((320950 - averageScore) / 320950);
+   printf("Your score is %.1f points lower than the High Score of 320950!\n", scoreDelta);
    
    printf("You are %.1f percent behind that score.\n", percentDiff);
    
