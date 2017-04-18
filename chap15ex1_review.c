@@ -27,46 +27,50 @@ int main (void)
 	// Find out how many movies the user has seen and can rate
 	// The loop will continue until they enter a number more than 0
 
-	do{
-		printf("How many movies have you seen this year? ");
-		scanf(" %d", &numMovies);
+	do  {
+		  printf("How many movies have you seen this year? ");
+		  scanf(" %d", &numMovies);
 
-		// If the user enters 0 or a negative number, the program
-		// will remind them to enter a positive number and prompt 
-		// them again
+		  // If the user enters 0 or a negative number, the program
+		  // will remind them to enter a positive number and prompt 
+		  // them again
 
-		if(numMovies < 1);
+		if(numMovies < 1)
 		{
 			printf("No movies! How can you rank them?\nTry again!\n\n");
+			
+			numMovies = atoi(numMovies);
+			printf(" %s" , &numMovies);
 		}
 	} while (numMovies < 1);
 
 	for(ctr = 1; ctr <= numMovies; ctr++)
-	{
-		// Get the name of the movie and the user's rating
+	  {
+	    // Get the name of the movie and the user's rating
 
-		printf("\nWhat was the name of the movie? ");
-		printf("(One word titles only!)" );
-		scanf(" %s", movieName);
-		printf("On a scale of 1 to 10, what would");
-		printf("you rate it? ");
-		scanf(" %d", &rating);
+		  printf("\nWhat was the name of the movie? ");
+		  printf("(One word titles only!)" );
+		  scanf(" %s", movieName);
+		  printf("On a scale of 1 to 10, what would");
+		  printf(" you rate it? ");
+		  scanf(" %d", &rating);
 
-		// Check whether it's their best-rated movie so far
-		if (rating > favRating)
-		{
-			strcpy(favorite, movieName);
-			favRating = rating;
-		}
-		// Check whether it's their worst-rated movie so far
-		if (rating < leastRating)
-		{
-			strcpy(least, movieName);
-			leastRating = rating;
-		}
-		printf("\nYour Favorite Movie was %s.\n", favorite);
-		printf(("\nYour Least favorite Movie was %s.\n"), least);
-	}
+		  // Check whether it's their best-rated movie so far
+		  if (rating > favRating)
+		  {
+			  strcpy(favorite, movieName);
+			  favRating = rating;
+		  }
+		  
+		  // Check whether it's their worst-rated movie so far
+		  if (rating < leastRating)
+		  {
+			  strcpy(least, movieName);
+			  leastRating = rating;
+		  }
+	  }  
+		  printf("\nYour Favorite Movie was %s.\n", favorite);
+		  printf(("\nYour Least Favorite Movie was %s.\n"), least);
 	
 	return 0;
-}
+  }
