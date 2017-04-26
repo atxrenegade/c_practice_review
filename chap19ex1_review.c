@@ -34,6 +34,7 @@ int main (void)
 
 	for(int i = 0; i < strlen(password) ; i++)
 	{
+	  if (isdigit(password[i]))
 	  {
 		  hasDigit = 1;
 		  continue;
