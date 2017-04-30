@@ -45,6 +45,10 @@ int main (void)
 				custBal[ctr]);
 			printf(" No additional credit.\n");
 		}
+		else
+		{ 
+		  printf("**\nThe customer's credit is good!\n");
+		}
 	}
 	else
 	{
