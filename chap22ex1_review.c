@@ -24,7 +24,11 @@ int main (void)
 	float custBal[10] = {0.00, 45.34, 71.23, 301.56, 9.08,
 						 192.41, 389.00, 229.67, 18.31, 59.54};
 	/* Interact with the user looking for a balance. */
-	printf("\n\n*** Customer Balance Lookup ***\n");
+	printf("\n\n*** Custoner Balance Lookup ***\n");
+	printf("What customer number do you need to check? ");
+	scanf(" %d", &idSearch);
+	
+	/* Search to see that the customer ID exists in the array */
 	for (ctr = 0; ctr<10; ctr++)
 	{
 		if (idSearch == custID[ctr])
