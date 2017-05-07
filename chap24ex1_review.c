@@ -45,7 +45,7 @@ int main (void)
 		  {
 		    printf("\nWhat was your rating on a scale ");
 			  printf("of 1-10: ");
-			  scanf("%d ", &movieratings[i]);
+			  scanf(" %d", &movieratings[i]);
 			  ctr++; // This will be used to print only movies
 				   // you've seen
 			  continue;
