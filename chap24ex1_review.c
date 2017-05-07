@@ -81,7 +81,7 @@ int main (void)
 		}
 	}
 	// Now print the movies you saw in order
-	printf("\n\n** Your Movie Ratings for the 2012 Oscar ");
+	printf("\n\n** Your Movie Ratings for the 2017 Oscar ");
 	printf("Contenders **\n");
 	for (i = 0; i < ctr ; i++)
 	{
