@@ -5,7 +5,7 @@ Absolute Beginners Guide to C Programming
 Chapter 31 ex1 page 295
 chap31ex1_review.c
 
-This program demonstrates passing a variable to a fucntion by value.*/
+This program demonstrates passing a variable to a function by value.*/
 
 #include <stdio.h>
 
@@ -14,12 +14,12 @@ int main(void)
 	int i;
 
 	printf("Please eneter an integer...");
-	scanf(" %d, &i");
+	scanf(" %d", &i);
 
-	// Now call the half fucntion, passing the value of i
+	// Now call the half function, passing the value of i
 	half(i);
 
-	// Shows that the fucntion did not alter i's value
+	// Shows that the function did not alter i's value
 	printf("In main(), i is still %d.\n", i);
 
 	return(0); // Ends the program
