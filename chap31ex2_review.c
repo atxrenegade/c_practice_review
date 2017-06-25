@@ -2,8 +2,8 @@
 Harleigh Abel
 April 27, 2017
 Absolute Beginners Guide to C Programming 
-Chapter 32 ex2 page 297
-chap32ex2_review.c
+Chapter 31 ex2 page 297
+chap31ex2_review.c
 The program demonstrates passing an array to a function. */
 
 #include <stdio.h>
