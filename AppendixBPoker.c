@@ -137,7 +137,35 @@ int main(void)
 		printf("\nStraight Flush\t\t\t20 credits");
 		printf("\n\nHave fun!!\n\n");
 	}
+
+	// Function to get first hand(int cardRank[], int cardSuit[])
+	void getFirstHand(int cardRank[], int cardSuit[])
+	{
+		int i, j;
+		int cardDup;
+
+		for (i = 0; i < 5; i++)
+		{
+			cardDup = 0;
+			do {
+				// Card rank is one of 13 (2-10, J, Q, K, A)
+				cardRank[i] = (rand() % 13);
+				// Card suit is one of 4
+				// (club, diamond, heart, spade)
+				cardSuit[i] = (rand() % 4);
+
+				// Loop that ensures each card is unique
+				for (j = 0; j < i; j++)
+				{
+					if ((cardRank[i] == cardRank[j])) &&
+						(cardsuit[i] == cardSuit[j])
+					{
+						cardDup = 1;
+					}
+				}
+			} while (cardDup == 1);
+		}	
+	}
+
 	
 }
-
- 
