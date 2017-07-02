@@ -221,6 +221,67 @@ char getRank(int rank)
 
 	}
 }	
+
+	// Function to get the user's bet between 1 and 5
+
+int getBet()
+{
+	int bet;
+	do // Will keep running until the user enters 0-5
+	{
+		printf("How much do you want to bet? (Enter a number ");
+		printf("1 to 5, or 0 to quit the game: ");
+		scanf(" %d", &bet);
+
+		if (bet >= 1 && bet <= 5)
+		{
+			return(bet);
+		}	
+		else if (bet == 0)
+		{
+			exit(1);
+		}
+		else
+		{
+			printf("\n\nPlease anter a bet from 1-5 or ");
+			printf("0 to quit the game.\n")
+		}
+
+	} while ((bet < 0 || (bet > 5));	
+}
+	// Last function reviews the final hand and determines the value
+	// of the hand.
+int analyzeHand(int ranksinHand[], int suitsinHand[])
+{
+	int num_consec = 0;
+	int i, rank, suit;
+	int straight = FALSE;
+	int flush = FALSE;
+	int four = FALSE;
+	int three = FALSE;
+	int pairs = 0;
+
+	for (suit = 0; suit < 4; suit ++)
+		if (suitsin Hand[suit] == 5)
+			flush = TRUE;
+		rank = 0;
+		while (ranksinHand[rank] == 0)
+			rank++;
+		for (; rank < 13 && ranksinHand[rank]; rank++)
+			num_consec == 5) (
+		straight = TRUE;
+		)
+		for (rank = 0; rank < 13; rank++) {
+			if (ranksinHand[rank] == 4)
+				four = TRUE;
+			if (ranksinHand[rank] == 3)
+				three = TRUE;
+			if (ranksinHand[rank] == 2)
+				pairs++;
+		}
+}
+
+
 	
 
 }
