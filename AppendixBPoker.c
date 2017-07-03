@@ -279,6 +279,39 @@ int analyzeHand(int ranksinHand[], int suitsinHand[])
 			if (ranksinHand[rank] == 2)
 				pairs++;
 		}
+
+		if (straight && flush){
+			printf("Straight flush\n\n");
+			return (20);
+		}
+		else if (four) {
+			printf("Four of a kind\n\n");
+			return (10);
+		}
+		else if (three && pairs == 1) {
+			printf("Full house\n\n");
+			return (8);
+		}
+		else if (flush) {
+			printf("Flush\n\n");
+			return (5);
+		}
+		else if (straight) {
+			printf("Straight\n\n");
+			return (4);
+		}
+		else if (three) {
+			printf("Three of a kind\n\n");
+			return (3);
+		}
+		else if (pairs == 2) {
+			printf("Two pairs\n\n");
+			return (2);
+		}
+	else if (pairs == 1) {
+		printf("Pair\n\n");
+		return (0);
+	}
 }
 
 
