@@ -312,9 +312,64 @@ int analyzeHand(int ranksinHand[], int suitsinHand[])
 		printf("Pair\n\n");
 		return (0);
 	}
+	else {
+		printf("High Card\n\n");
+		return (0);
+	}
 }
+// This function looks through each of the fie cards in the first hand 
+// and asks the user if they want to keep the card. If they say no,
+// they get a replacement card.
 
+void getFinalHand(int cardRank[], int cardsSuit[], int finalRank[],
+	int finalSuit[], int ranksinHand[], int suitsinHand[])	
+{
+	int i, j, cardDup;
+	char suit, rank, ans;
 
+	for (i = 0; i < 5; i++)
+	{
+		suit = getSuit(cardSuit[i]);
+		rank = getRank(cardRank[i]);
+		printf("Do you want to keep the card #%d: %c%c?", i + 1, rank, suit);
+		printf("\nPlease answer (Y/N): ");
+		scanf(" %c", &ans);
+		if (toupper(ans) == 'Y')
+		{
+			finalRank[i];
+			finalSuit[i] = cardSuit[i];
+			ranksinHand[finalRank[i]]++;
+			suitsinHand[finalSuit[i]]++;
+			continue;
+		}
+		else if(toupper(ans) == 'N')
+		{
+			cardDup = 0;
+			finalRank[i] = (rand() % 13);
+			finalRank[i] = (rand() % 4);
+
+			// First check your new card against the 5 original
+			// cards to avoid duplication
+			for (j = 0; j < i; j++)	
+			{
+				if ((finalRank[i]) == cardRank[j] && (finalSuit[i] == cardSuit[j]])
+				{
+					cardDup = 1;
+				}
+			}	
+			// Next, check the new card against any newly drawn
+			// cards to avoid duplication
+			for (j = 0; j < i; j++)
+			{
+				if ((finalRank[i] == finalRank[j] && finalSuit[i] == finalSuit[j]))
+				{
+					cardDup = 1;
+				}
+			}
+		}	while (cardDup == 1);
+		ranksinHand[finalRank[i]]++;
+		suitsinHand[finalSuit[i]]++; 
+		}
+	}
 	
-
 }
