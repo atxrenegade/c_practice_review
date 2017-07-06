@@ -1,3 +1,4 @@
+
 /*
 Harleigh Abel
 June 25 2017
@@ -43,6 +44,8 @@ int main(void)
 	int cardRank[5]; // Will be one of 13 values ACE-KING
 	int cardSuit[5]; // Will be one of 4 values (for Clubs, Diamonds,
 					// Hearts, Spades)
+	int finalRank[5];
+	int finalSuit[5];
 	int ranksinHand[13]; // Used for evaulating the final hand
 	int suitsinHand[4]; // Used for evaulating the final hand
 	int winnings;
