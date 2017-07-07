@@ -1,4 +1,3 @@
-
 /*
 Harleigh Abel
 June 25 2017
@@ -95,7 +94,7 @@ int main(void)
 		{
 			suit = getSuit(finalSuit[i]);
 			rank = getRank(finalRank[i]);
-			printf("Card #%d: %c%c\n", i + 1; rank, suit);
+			printf("Card #%d: %c%c\n", i + 1, rank, suit);
 		}
 		 	// possible missing curly brace
 			winnings = analyzeHand(ranksinHand, suitsinHand);
@@ -247,7 +246,7 @@ int getBet()
 		else
 		{
 			printf("\n\nPlease anter a bet from 1-5 or ");
-			printf("0 to quit the game.\n")
+			printf("0 to quit the game.\n");
 		}
 
 	} while ((bet < 0 || (bet > 5));	
@@ -265,15 +264,16 @@ int analyzeHand(int ranksinHand[], int suitsinHand[])
 	int pairs = 0;
 
 	for (suit = 0; suit < 4; suit ++)
-		if (suitsin Hand[suit] == 5)
+		if (suitsinHand[suit] == 5)
 			flush = TRUE;
 		rank = 0;
 		while (ranksinHand[rank] == 0)
 			rank++;
 		for (; rank < 13 && ranksinHand[rank]; rank++)
-			num_consec == 5) (
-		straight = TRUE;
-		)
+			num_consec++;
+		if (num_consec == 5) {
+		  (straight = TRUE;)
+		}
 		for (rank = 0; rank < 13; rank++) {
 			if (ranksinHand[rank] == 4)
 				four = TRUE;
@@ -332,7 +332,7 @@ void getFinalHand(int cardRank[], int cardsSuit[], int finalRank[],
 
 	for (i = 0; i < 5; i++)
 	{
-		suit = getSuit(cardSuit[i]);
+		suit = getSuit(cardsSuit[i]);
 		rank = getRank(cardRank[i]);
 		printf("Do you want to keep the card #%d: %c%c?", i + 1, rank, suit);
 		printf("\nPlease answer (Y/N): ");
@@ -340,7 +340,7 @@ void getFinalHand(int cardRank[], int cardsSuit[], int finalRank[],
 		if (toupper(ans) == 'Y')
 		{
 			finalRank[i];
-			finalSuit[i] = cardSuit[i];
+			finalSuit[i] = cardsSuit[i];
 			ranksinHand[finalRank[i]]++;
 			suitsinHand[finalSuit[i]]++;
 			continue;
