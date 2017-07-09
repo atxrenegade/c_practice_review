@@ -33,7 +33,8 @@ int getBet();
 char getSuit(int suit);
 char getRank(int rank);
 void getFirstHand(int cardRank[], int cardSuit[]);
-void getFinalHand(int cardRank[], int cardSuit[], int finalRank[], int finalSuit[], int ranksinHand[]);
+void getFinalHand(int cardRank[], int cardSuit[], int finalRank[], int finalSuit[], int ranksinHand[], int suitsinHand[]);
+int analyzeHand(int ranksinHand[], int suitsinHand[]);
 
 int main(void)
 {
@@ -62,10 +63,10 @@ int main(void)
 	// Loop runs each time the user plays a hand of draw poker
 
 	do {
-		bet = getBet();
-		srand(time(&t));
-		getFirstHand(cardRank, cardSuit);
-		printf("Your five cards: \n");
+  		bet = getBet();
+  		srand(time(&t));
+  		getFirstHand(cardRank, cardSuit);
+  		printf("Your five cards: \n");
 		for(i = 0; i < 5; i++)
 		{
 			suit = getSuit(cardSuit[i]);
@@ -159,8 +160,8 @@ int main(void)
 				// Loop that ensures each card is unique
 				for (j = 0; j < i; j++)
 				{
-					if ((cardRank[i] == cardRank[j])) &&
-						(cardsuit[i] == cardSuit[j])
+					if ((cardRank[i] == cardRank[j]) &&
+						(cardSuit[i] == cardSuit[j])
 					{
 						cardDup = 1;
 					}
@@ -340,7 +341,7 @@ void getFinalHand(int cardRank[], int cardsSuit[], int finalRank[],
 		if (toupper(ans) == 'Y')
 		{
 			finalRank[i];
-			finalSuit[i] = cardsSuit[i];
+			finalSuit[i] = cardSuit[i];
 			ranksinHand[finalRank[i]]++;
 			suitsinHand[finalSuit[i]]++;
 			continue;
