@@ -36,7 +36,7 @@ void getFirstHand(int cardRank[], int cardSuit[]);
 void getFinalHand(int cardRank[], int cardSuit[], int finalRank[], int finalSuit[], int ranksinHand[], int suitsinHand[]);
 int analyzeHand(int ranksinHand[], int suitsinHand[]);
 
-int main(void)
+int main()
 {
 	int bet;
 	int bank = 100;
@@ -161,7 +161,7 @@ int main(void)
 				for (j = 0; j < i; j++)
 				{
 					if ((cardRank[i] == cardRank[j]) &&
-						(cardSuit[i] == cardSuit[j])
+						(cardSuit[i] == cardSuit[j]))
 					{
 						cardDup = 1;
 					}
@@ -250,7 +250,7 @@ int getBet()
 			printf("0 to quit the game.\n");
 		}
 
-	} while ((bet < 0 || (bet > 5));	
+	} while ((bet < 0) || (bet > 5));	
 }
 	// Last function reviews the final hand and determines the value
 	// of the hand.
@@ -273,7 +273,7 @@ int analyzeHand(int ranksinHand[], int suitsinHand[])
 		for (; rank < 13 && ranksinHand[rank]; rank++)
 			num_consec++;
 		if (num_consec == 5) {
-		  (straight = TRUE;)
+		  (straight = TRUE);
 		}
 		for (rank = 0; rank < 13; rank++) {
 			if (ranksinHand[rank] == 4)
@@ -325,7 +325,7 @@ int analyzeHand(int ranksinHand[], int suitsinHand[])
 // and asks the user if they want to keep the card. If they say no,
 // they get a replacement card.
 
-void getFinalHand(int cardRank[], int cardsSuit[], int finalRank[],
+void getFinalHand(int cardRank[], int cardSuit[], int finalRank[],
 	int finalSuit[], int ranksinHand[], int suitsinHand[])	
 {
 	int i, j, cardDup;
@@ -333,7 +333,7 @@ void getFinalHand(int cardRank[], int cardsSuit[], int finalRank[],
 
 	for (i = 0; i < 5; i++)
 	{
-		suit = getSuit(cardsSuit[i]);
+		suit = getSuit(cardSuit[i]);
 		rank = getRank(cardRank[i]);
 		printf("Do you want to keep the card #%d: %c%c?", i + 1, rank, suit);
 		printf("\nPlease answer (Y/N): ");
@@ -354,9 +354,9 @@ void getFinalHand(int cardRank[], int cardsSuit[], int finalRank[],
 
 			// First check your new card against the 5 original
 			// cards to avoid duplication
-			for (j = 0; j < i; j++)	
+			for (j = 0; j < 5; j++)	
 			{
-				if ((finalRank[i]) == cardRank[j] && (finalSuit[i] == cardSuit[j]])
+				if ((finalRank[i] == cardRank[j]) && (finalSuit[i] == cardSuit[j]))
 				{
 					cardDup = 1;
 				}
@@ -376,4 +376,3 @@ void getFinalHand(int cardRank[], int cardsSuit[], int finalRank[],
 		}
 	}
 	
-}
