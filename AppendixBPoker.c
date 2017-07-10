@@ -121,18 +121,18 @@ int main()
 		printf("\tHome of Video Draw Poker \n\n");
 		printf("****************************************************\n");
 
-		printf("Here are the rules: \n");
+		printf("\nHere are the rules: \n\n");
 		printf("You start with 100 credits, and you make a bet from");
-		printf("1 to 5 credits");
-		printf("You are dealt 5 cards, and you can then choose which");
-		printf("cards to keep ");
-		printf("or to discard\n");
-		printf("You want to make the best possible hand.\n");
+		printf(" 1 to 5 credits.");
+		printf("\nYou are dealt 5 cards, and you can then choose which ");
+		printf("cards to keep\n");
+		printf("or to discard.");
+		printf(" You want to make the best possible hand.\n\n");
 		printf("Here is the table for winnings (assuming a ");
-		printf("bet of 1 credit.\n");
+		printf("bet of 1 credit).\n");
 		printf("\n\nPair\t\t\t\t1 credit");
 		printf("\nTwo Pairs\t\t\t2 credits");
-		printf("\nThree of a kind\t\t\t 3 credits");
+		printf("\nThree of a kind\t\t\t3 credits");
 		printf("\nStraight\t\t\t4 credits");
 		printf("\nFlush\t\t\t\t5 credits");
 		printf("\nFull House\t\t\t8 credits");
@@ -233,7 +233,7 @@ int getBet()
 	do // Will keep running until the user enters 0-5
 	{
 		printf("How much do you want to bet? (Enter a number ");
-		printf("1 to 5, or 0 to quit the game: ");
+		printf("1 to 5, or 0 to quit the game): ");
 		scanf(" %d", &bet);
 
 		if (bet >= 1 && bet <= 5)
@@ -321,7 +321,7 @@ int analyzeHand(int ranksinHand[], int suitsinHand[])
 		return (0);
 	}
 }
-// This function looks through each of the fie cards in the first hand 
+// This function looks through each of the five cards in the first hand 
 // and asks the user if they want to keep the card. If they say no,
 // they get a replacement card.
 
