@@ -246,7 +246,7 @@ int getBet()
 		}
 		else
 		{
-			printf("\n\nPlease anter a bet from 1-5 or ");
+			printf("\n\nPlease enter a bet from 1-5 or ");
 			printf("0 to quit the game.\n");
 		}
 
@@ -340,7 +340,7 @@ void getFinalHand(int cardRank[], int cardSuit[], int finalRank[],
 		scanf(" %c", &ans);
 		if (toupper(ans) == 'Y')
 		{
-			finalRank[i];
+			finalRank[i] = cardRank[i];
 			finalSuit[i] = cardSuit[i];
 			ranksinHand[finalRank[i]]++;
 			suitsinHand[finalSuit[i]]++;
@@ -348,31 +348,35 @@ void getFinalHand(int cardRank[], int cardSuit[], int finalRank[],
 		}
 		else if(toupper(ans) == 'N')
 		{
-			cardDup = 0;
-			finalRank[i] = (rand() % 13);
-			finalRank[i] = (rand() % 4);
-
-			// First check your new card against the 5 original
-			// cards to avoid duplication
-			for (j = 0; j < 5; j++)	
-			{
-				if ((finalRank[i] == cardRank[j]) && (finalSuit[i] == cardSuit[j]))
-				{
-					cardDup = 1;
-				}
-			}	
-			// Next, check the new card against any newly drawn
-			// cards to avoid duplication
-			for (j = 0; j < i; j++)
-			{
-				if ((finalRank[i] == finalRank[j] && finalSuit[i] == finalSuit[j]))
-				{
-					cardDup = 1;
-				}
-			}
-		}	while (cardDup == 1);
-		ranksinHand[finalRank[i]]++;
-		suitsinHand[finalSuit[i]]++; 
-		}
+		  cardDup = 0;
+		  do {
+  			cardDup = 0;
+  			finalRank[i] = (rand() % 13);
+  			finalRank[i] = (rand() % 4);
+  
+  			// First check your new card against the 5 original
+  			// cards to avoid duplication
+  			for (j = 0; j < 5; j++)	
+  			{
+  				if ((finalRank[i] == cardRank[j]) && (finalSuit[i] == cardSuit[j]))
+  				{
+  					cardDup = 1;
+  				}
+  			}	
+  			// Next, check the new card against any newly drawn
+  			// cards to avoid duplication
+    			for (j = 0; j < i; j++)
+    			{
+    				if ((finalRank[i] == finalRank[j] && finalSuit[i] == finalSuit[j]))
+      			{
+      				cardDup = 1;
+      			}
+      		}
+  		}	while (cardDup == 1);
+  		ranksinHand[finalRank[i]]++;
+  		suitsinHand[finalSuit[i]]++; 
+  		}
+	  }
+	  
 	}
 	
