@@ -101,6 +101,65 @@ int main(void)
 				}
 			}
 
+			// This is the case for the 1990's
+			// Unlike the top menu, there isn't a data validation
+			// do-while loop
+
+			case (2):
+			{
+				printf("What would you like to see?\n");
+				printf("1. Baseball\n");
+				printf("2. The Movies\n");
+				printf("US Presidents\n");
+				printf("Quit\n");
+
+				printf("Enter your choice: ");
+
+				scanf(" %d", &choice2);
+
+				if (choice2 == 1)
+				{
+					printf("\n\nWorld Series Champions 1990's:\n");
+					printf("1990: Cincinnati Reds\n");
+					printf("1991: Minnesota Twins\n");
+					printf("1992: Toronto Blue Jays\n");
+					printf("1993: Toronto Blue Jays\n");
+					printf("1994: No World Series\n");
+					printf("1995: Atlanta Braves\n");
+					printf("1996: New York Yankees\n");
+					printf("1997: Florida Marlins\n");
+					printf("1998: New York Yankees\n");
+					printf("1999: New York Yankees\n");
+					printf("\n\n\n");
+					break;
+				}	else if (choice == 2)
+				{
+					printf("\n\nOscar Winning Movies 1990's: \n");
+					printf("1990: Dances With Wolves\n");
+					printf("1991: The Silence of the Lambs\n");
+					printf("1992: The Unforgiven\n");
+					printf("1993: Schindler's List\n");
+					printf("1995: Unforgiven\n");
+					printf("1996: The English Patient\n");
+					printf("1997: Titanic\n");
+					printf("1998: Shakespeare in Love\n");
+					printf("1999: America Beauty\n");
+					printf("\n\n\n");
+					break;
+				}	else if (choice2 == 3)
+				{
+					printf("US {residents in the 1990's: \n");
+					printf("1990-1992: George Bush\n");
+					printf("1993-1999 George Clinton\n");
+					printf("\n\n\n");
+					break;
+				} else if (choice2 == 4)
+				{
+					exit(1);
+				} else
+				printf("Sorry, that is not a valid choice!\n");
+				break;
+			}
 
 		}
 	}
