@@ -132,7 +132,7 @@ int main(void)
 					printf("1999: New York Yankees\n");
 					printf("\n\n\n");
 					break;
-				}	else if (choice == 2)
+				}	else if (choice2 == 2)
 				{
 					printf("\n\nOscar Winning Movies 1990's: \n");
 					printf("1990: Dances With Wolves\n");
@@ -160,7 +160,65 @@ int main(void)
 				printf("Sorry, that is not a valid choice!\n");
 				break;
 			}
+		}
+		// The section for when the user selects the 2000's
+		case (3);
+		{
+			printf("\n\nWhat would you like to see?\n");
+			printf("1. Baseball\n");
+			printf("2. The Movies\n");
+			printf("3. US Presidents\n");
+			printf("4. Quit\n");
 
+			printf("Enter your choice: ");
+			scanf(" %d", &choice2);
+
+			if (choice2 == 1)
+			{
+				printf("\n\nWorld Series Champions 2000's:\n");
+				printf("2000: New York Yankees\n");
+				printf("2001: Arizon Diamondbacks\n");
+				printf("2002: Anaheim Angels\n");
+				printf("2003: Florida Marlins\n");
+				printf("2004: Boston Red Sox\n");
+				printf("2005: Chicago White Sox\n");
+				printf("2006: St. Louis Cardinals\n");
+				printf("2007: Boston Red Sox\n");
+				printf("2008: Philadephia Phillies\n");
+				printf("2009: New York Yankees\n");
+				printf("\n\n\n");
+				break;
+			}	else if (choice2 == 2)
+			{
+				printf("\n\nOscar Winning Movies 2000's: \n");
+					{
+					printf("2000: Gladiator\n");
+					printf("2001: A Beautiful Mind\n");
+					printf("2002: Chicago\n");
+					printf("2003: Lord of the Rings\n");
+					printf("2004: Million Dollar baby\n");
+					printf("2005: Crash\n");
+					printf("2006: The Departed\n");
+					printf("2007: No Country for Old Men\n");
+					printf("2008: Slumdog Millionaire\n");
+					printf("2009: The Hurt Locker\n");
+					printf("\n\n\n");
+					break;}
+			}	else if (choice2 == 3)
+			{
+				printf("US {residents in the 2000's: \n");
+					printf("\n");
+					printf("\n");
+					printf("\n\n\n");
+					break;
+				} else if (choice2 == 4)
+				{
+					exit(1);
+				} else
+				printf("Sorry, that is not a valid choice!\n");
+				break;
+				
+			}
 		}
 	}
 }
