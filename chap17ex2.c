@@ -207,18 +207,29 @@ int main(void)
 			}	else if (choice2 == 3)
 			{
 				printf("US {residents in the 2000's: \n");
-					printf("\n");
-					printf("\n");
-					printf("\n\n\n");
-					break;
+				printf("2000: Bill Clinton\n");
+				printf("2001-2008: George Bush\n");
+				printf("2009 Barack Obama\n");
+				printf("\n\n\n");
+				break;
 				} else if (choice2 == 4)
 				{
 					exit(1);
 				} else
-				printf("Sorry, that is not a valid choice!\n");
-				break;
-				
+				{
+					printf("Sorry, that is not a valid choice!\n");
+					break;
 			}
 		}
+		case (4):
+			exit (1);
+
+		default: printf("\n%d is not a valid choice\n", choice1);
+			printf("Try again.\n");	
+			break;
 	}
+} while ((choice1 < 1) || (choice1 > 4));
+
+return 0;
+
 }
