@@ -36,7 +36,7 @@ int main(void)
 	do {
 
 		printf("Enter your choice: ");
-		scanf(" %d, &choice1");
+		scanf(" %d", &choice1);
 		switch (choice1)
 		{
 			// In the first case, the user pickes the 1980's. Now it is
@@ -157,9 +157,10 @@ int main(void)
 				{
 					exit(1);
 				} else
+				{
 				printf("Sorry, that is not a valid choice!\n");
 				break;
-			}
+			  }
 		}
 		// The section for when the user selects the 2000's
 		case (3):
