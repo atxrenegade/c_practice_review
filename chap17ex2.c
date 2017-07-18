@@ -16,7 +16,7 @@ information from that specific category. */
 
 int main(void)
 {
-	// Despite being a long rpogram, you only need two variables
+	// Despite being a long program, you only need two variables
 	// one for the first menu and one for the second
 
 	int choice1;
@@ -37,11 +37,11 @@ int main(void)
 
 		printf("Enter your choice: ");
 		scanf(" %d, &choice1");
-		switch (choice1);
+		switch (choice1)
 		{
 			// In the first case, the user pickes the 1980's. Now it is
 			// time to see what specific info they need.
-			case (1);
+			case (1):
 			{
 				printf("What would you like to see?\n");
 				printf("1. Baseball\n");
@@ -70,7 +70,7 @@ int main(void)
 				} else if (choice2 == 2)
 
 				{
-					printf("\n\nOscar Winning Movies in the 1980's\n")
+					printf("\n\nOscar Winning Movies in the 1980's\n");
 					printf("1980: Ordinary People\n");
 					printf("1981: Chariots of Fire\n");
 					printf("1982: Gandhi\n");
@@ -85,7 +85,7 @@ int main(void)
 					break;
 				} else if (choice2 == 3)
 				{
-					printf("\n\nUS Presidents of the 1980's:"\n);
+					printf("\n\nUS Presidents of the 1980's:\n");
 					printf("1980: Jimmy Carter\n");
 					printf("1981-1988 Ronald Reagan\n");
 					printf("1989: George Bush\n");
@@ -162,7 +162,7 @@ int main(void)
 			}
 		}
 		// The section for when the user selects the 2000's
-		case (3);
+		case (3):
 		{
 			printf("\n\nWhat would you like to see?\n");
 			printf("1. Baseball\n");
